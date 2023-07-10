@@ -1,7 +1,7 @@
 import React from "react";
 import "./widgetCard.css";
 import WidgetEntry from "./widgetEntry";
-import { IconContext } from "react-dom";
+import { IconContext } from "react-icons";
 import { FiChevronRight } from "react-icons/fi";
 
 export default function WidgetCard({ title, similar, featured, newRelease }) {

@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
-import APIkit from "../../spodify";
+import React, { useState, useEffect } from "react";
+import APIkit from "../../spotify";
 import { IconContext } from "react-icons";
-import { AiFillPlayCircle } from "react-icon/ai";
+import { AiFillPlayCircle } from "react-icons/ai";
 import "./library.css";
 import { useNavigate } from "react-router-dom";
 
@@ -10,12 +10,14 @@ export default function Library() {
 
     useEffect(() => {
         APIkit.get("me/playlists").then(function (response) {
-            setPlaylists(response.data.item);
+            setPlaylists(response.data.items);
         });
     }, []);
 
+    const navigate = useNavigate();
+
     const playPlaylist = (id) => {
-        Navigate("/player", { state: { id: id } });
+        navigate("/player", { state: { id: id } });
     };
 
     return (

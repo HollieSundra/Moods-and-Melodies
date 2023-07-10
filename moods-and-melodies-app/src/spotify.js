@@ -1,21 +1,21 @@
 import axios from "axios";
 
 const authEndpoint ="https://accounts.spotify.com/authorize?";
-const clientId = "10ff71b2181a4ee19909431870ef03f4";
-const redirectUrl = "http://localhost:3000";
+const clientId = "fb85f362d5224aecbb2f9199c8e22b69";
+const redirectUri = "http://localhost:3000";
 const scopes = ["user-library-read", "playlist-read-private"];
 
-export const loginEndpoint = `${authEndpoint}client_id=${clientId}&redirect_url=${redirectUrl}&scope=${scopes.join(
+export const loginEndpoint = `${authEndpoint}client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join(
     "%20"
 )}&response_type=token&show_dialog=true`;
 
 const apiClient = axios.create({
-    baseUrl: "https://api.spotify.com/v1/",
+    baseURL: "https://api.spotify.com/v1/",
 });
 
 export const setClientToken = (token) => {
     apiClient.interceptors.request.use(async function (config) {
-        config.headers.Authorization = "Bearer" + token;
+        config.headers.Authorization = "Bearer " + token;
         return config;
     });
 };

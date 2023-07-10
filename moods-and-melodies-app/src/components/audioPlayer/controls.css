@@ -32,7 +32,7 @@
 }
 
 .play-pause-btn.active {
-    box-shadow: inset -4px -4px 10px #ff8769, inset 4px 4px 10px #753d30;
+    box-shadow: inset -4px -4px 10px #ff8769, inset 4px 4px 10px 1px #753d30;
 }
 
 .play-pause-btn:hover {

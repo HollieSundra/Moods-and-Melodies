@@ -3,7 +3,7 @@ import "./progressCircle.css";
 
 const Circle = ({ color, percentage, size, strokeWidth }) => {
     const radius = size / 2 - 10;
-    const circ = 2* Math.PI * radius - 20;
+    const circ = 2 * Math.PI * radius - 20;
     const strokePct = ((100 - Math.round(percentage)) * circ) / 100;
 
     return (
@@ -54,7 +54,7 @@ export default function ProgressCircle({
                 y={30}
                 width={2 * (size / 2 - 30)}
                 height={2 * (size / 2 - 30)}
-                href="https://pngimg.com/uploads/vinyl_PNG107.png"
+                href="https://pngimg.com/uploads/vinyl/vinyl_PNG107.png"
                 clipPath="url(#myCircle)"
                 />
                 <image

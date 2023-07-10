@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import "./controls.css";
+import "./audioPlayer.css";
 import Controls from "./controls";
 import ProgressCircle from "./progressCircle";
 import WaveAnimation from "./waveAnimation";
@@ -19,6 +19,8 @@ export default function AudioPlayer({
     const intervalRef = useRef();
 
     const isReady = useRef(false);
+
+    const { duration } = audioRef.current;
 
     const currentPrecentage = duration ? (trackProgress / duration) * 100 : 0;
 
@@ -93,7 +95,7 @@ export default function AudioPlayer({
     };
     const artists = [];
     currentTrack?.album?.artists.forEach((artist) => {
-        artists.push(artists.name);
+        artists.push(artist.name);
     });
     return (
         <div className="player-body flex">
@@ -125,5 +127,5 @@ export default function AudioPlayer({
                 </div>
             </div>
         </div>
-    )
+    );
 }

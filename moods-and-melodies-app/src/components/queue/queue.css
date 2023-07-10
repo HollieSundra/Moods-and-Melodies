@@ -20,7 +20,7 @@
 .queue {
     height: 85%;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     width: 80%;
 }
 

@@ -1,6 +1,6 @@
 import React from "react";
 import "./controls.css";
-import { IconContext } from "react-dom";
+import { IconContext } from "react-icons";
 import { FaPause } from "react-icons/fa";
 import { IoPlaySkipBack, IoPlaySkipForward, IoPlay } from "react-icons/io5";
 

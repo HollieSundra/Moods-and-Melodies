@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Sidebar from "../../components/sidebar";
-import { setClientToken } from "../../spodify";
+import { setClientToken } from "../../spotify";
 import Login from "../auth/login";
 import Favorites from "../favorites";
 import Feed from "../feed";

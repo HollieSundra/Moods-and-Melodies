@@ -9,7 +9,7 @@ export default function Widgets({ artistID }) {
     const [newRelease, setNewRelease] = useState([]);
 
     useEffect(() => {
-        if (artistiD) {
+        if (artistID) {
             apiClient
             .get(`/artists/${artistID}/related-artists`)
             .then((res) => {
